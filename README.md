@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://i.ibb.co/68FsLc4/logo.png" width="483 " height=" 247">
+<a href="https://www.npmjs.com/package/@netojose/react-google-places-typeahead"><img src="https://i.ibb.co/68FsLc4/logo.png" width="483 " height=" 247"></a>
 </p>
 
 <p align="center">
