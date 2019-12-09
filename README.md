@@ -1,32 +1,16 @@
 <p align="center">
-  <img src="https://i.ibb.co/68FsLc4/logo.png" width="483 " height=" 247">
+<img src="https://i.ibb.co/68FsLc4/logo.png" width="483 " height=" 247">
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/@netojose/react-google-places-typeahead">
-    <img src="https://badgen.net/github/license/netojose/react-google-places-typeahead" alt="License">
-  </a>
-  <a href="https://www.npmjs.com/package/@netojose/react-google-places-typeahead">
-    <img src="https://badgen.net/github/last-commit/netojose/react-google-places-typeahead" alt="Last commit">
-  </a>
-  <a href="https://www.npmjs.com/package/@netojose/react-google-places-typeahead">
-    <img src="https://badgen.net/github/open-issues/netojose/react-google-places-typeahead" alt="Open issues">
-  </a>
-  <a href="https://www.npmjs.com/package/@netojose/react-google-places-typeahead">
-    <img src="https://badgen.net/github/stars/netojose/react-google-places-typeahead" alt="Stars">
-  </a>
-  <a href="https://www.npmjs.com/package/@netojose/react-google-places-typeahead">
-    <img src="https://badgen.net/npm/v/@netojose/react-google-places-typeahead" alt="Npm version">
-  </a>
-  <a href="https://www.npmjs.com/package/@netojose/react-google-places-typeahead">
-    <img src="https://badgen.net/bundlephobia/min/@netojose/react-google-places-typeahead" alt="Minified size">
-  </a>
-  <a href="https://www.npmjs.com/package/@netojose/react-google-places-typeahead">
-    <img src="https://badgen.net/bundlephobia/minzip/@netojose/react-google-places-typeahead" alt="Minified gzipped size">
-  </a>
-  <a href="https://www.npmjs.com/package/@netojose/react-google-places-typeahead">
-    <img src="https://badgen.net/npm/dt/@netojose/react-google-places-typeahead" alt="Downloads">
-  </a>
+<a href="https://www.npmjs.com/package/@netojose/react-google-places-typeahead"><img src="https://badgen.net/github/license/netojose/react-google-places-typeahead" alt="License"></a>
+<a href="https://www.npmjs.com/package/@netojose/react-google-places-typeahead"><img src="https://badgen.net/github/last-commit/netojose/react-google-places-typeahead" alt="Last commit"></a>
+<a href="https://www.npmjs.com/package/@netojose/react-google-places-typeahead"><img src="https://badgen.net/github/open-issues/netojose/react-google-places-typeahead" alt="Open issues"></a>
+<a href="https://www.npmjs.com/package/@netojose/react-google-places-typeahead"><img src="https://badgen.net/github/stars/netojose/react-google-places-typeahead" alt="Stars"></a>
+<a href="https://www.npmjs.com/package/@netojose/react-google-places-typeahead"><img src="https://badgen.net/npm/v/@netojose/react-google-places-typeahead" alt="Npm version"></a>
+<a href="https://www.npmjs.com/package/@netojose/react-google-places-typeahead"><img src="https://badgen.net/bundlephobia/min/@netojose/react-google-places-typeahead" alt="Minified size"></a>
+<a href="https://www.npmjs.com/package/@netojose/react-google-places-typeahead"><img src="https://badgen.net/bundlephobia/minzip/@netojose/react-google-places-typeahead" alt="Minified gzipped size"></a>
+<a href="https://www.npmjs.com/package/@netojose/react-google-places-typeahead"><img src="https://badgen.net/npm/dt/@netojose/react-google-places-typeahead" alt="Downloads"></a>
 </p>
 
 # Google Maps Places Autocomplete React component
