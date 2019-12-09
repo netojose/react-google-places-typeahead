@@ -34,7 +34,11 @@ export function getLatLng(result) {
     })
 }
 
-export function loadScript(apiKey, id = 'google-places-script') {
+export function loadScript(
+    apiKey,
+    callbackFn = null,
+    id = 'google-places-script'
+) {
     const script = document.querySelector(`#${id}`)
     if (script) {
         return
@@ -43,7 +47,9 @@ export function loadScript(apiKey, id = 'google-places-script') {
     const scriptTag = document.createElement('script')
     scriptTag.setAttribute(
         'src',
-        `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places&callback=mapsDone`
+        `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places${
+            callbackFn ? `&callback=${callbackFn}` : ''
+        }`
     )
     scriptTag.setAttribute('id', id)
     document.head.appendChild(scriptTag)

@@ -121,40 +121,41 @@ function GooglePlacesTypeahead({
 
     const handleKeyboardNavigation = useCallback(
         evt => {
+            const suggestionsQty = suggestions.length
             if (
-                (evt.keyCode !== KEY_UP_CODE &&
-                    evt.keyCode !== KEY_DOWN_CODE &&
-                    evt.keyCode !== KEY_ENTER_CODE &&
-                    evt.keyCode !== KEY_ESC_CODE) ||
-                suggestions.length < 1
+                suggestionsQty < 1 ||
+                ![
+                    KEY_ESC_CODE,
+                    KEY_ENTER_CODE,
+                    KEY_DOWN_CODE,
+                    KEY_UP_CODE
+                ].includes(evt.keyCode)
             ) {
                 return
             }
 
             evt.preventDefault()
 
-            if (evt.keyCode === KEY_ESC_CODE) {
-                removeSuggestions()
-                return
+            switch (evt.keyCode) {
+                case KEY_ESC_CODE:
+                    removeSuggestions()
+                    return
+                case KEY_ENTER_CODE:
+                    const active = suggestions.find(item => item.active)
+                    handleSelect(active)
+                    return
+                default:
+                    const index = suggestions.findIndex(item => item.active)
+                    let newIndex =
+                        index +
+                        { [KEY_UP_CODE]: -1, [KEY_DOWN_CODE]: 1 }[evt.keyCode]
+                    if (newIndex < 0) {
+                        newIndex = suggestionsQty - 1
+                    } else if (newIndex >= suggestionsQty) {
+                        newIndex = 0
+                    }
+                    setActiveSuggestion(suggestions[newIndex].placeId)
             }
-
-            if (evt.keyCode === KEY_ENTER_CODE) {
-                handleSelect(suggestions.find(suggestion => suggestion.active))
-                return
-            }
-
-            const activeIndex = suggestions.findIndex(
-                suggestion => suggestion.active
-            )
-            let newIndex =
-                activeIndex +
-                { [KEY_UP_CODE]: -1, [KEY_DOWN_CODE]: 1 }[evt.keyCode]
-            if (newIndex < 0) {
-                newIndex = suggestions.length - 1
-            } else if (newIndex >= suggestions.length) {
-                newIndex = 0
-            }
-            setActiveSuggestion(suggestions[newIndex].placeId)
         },
         [suggestions]
     )
