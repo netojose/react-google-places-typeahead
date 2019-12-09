@@ -1,62 +1,61 @@
 {
-    "name": "@netojose/react-google-places-typeahead",
-    "version": "1.0.0",
-    "description": "React component for Google Maps Places Autocomplete",
-    "main": "./dist/index.js",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/netojose/react-google-places-typeahead.git"
-    },
-    "scripts": {
-        "test": "jest",
-        "test:coverage": "jest --coverage",
-        "start": "webpack --watch",
-        "build": "webpack"
-    },
-    "homepage": "https://github.com/netojose/react-google-places-typeahead",
-    "bugs": "https://github.com/netojose/react-google-places-typeahead/issues",
-    "author": {
-        "name": "José neto",
-        "email": "sputinykster@gmail.com"
-    },
-    "peerDependencies": {
-        "prop-types": "^15.7.2",
-        "react": "^16.8.0",
-        "react-dom": "^16.8.0"
-    },
-    "devDependencies": {
-        "@babel/core": "^7.5.0",
-        "@babel/plugin-proposal-class-properties": "^7.5.0",
-        "@babel/preset-env": "^7.5.0",
-        "@babel/preset-react": "^7.0.0",
-        "babel-jest": "^24.8.0",
-        "babel-loader": "^8.0.6",
-        "enzyme": "^3.10.0",
-        "enzyme-adapter-react-16": "^1.14.0",
-        "jest": "^24.8.0",
-        "prop-types": "^15.7.2",
-        "react": "^16.12.0",
-        "react-dom": "^16.12.0",
-        "webpack": "^4.5.0",
-        "webpack-cli": "^3.2.1"
-    },
-    "dependencies": {},
-    "tags": [
-        "react",
-        "autocomplete",
-        "typeahead",
-        "autosuggest",
-        "google-maps",
-        "google-places"
-    ],
-    "keywords": [
-        "react",
-        "react-component",
-        "typeahead",
-        "autocomplete",
-        "autosuggest",
-        "google-maps",
-        "google-places"
-    ]
+  "name": "@netojose/react-google-places-typeahead",
+  "version": "1.0.0",
+  "description": "React component for Google Maps Places Autocomplete",
+  "main": "./dist/index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netojose/react-google-places-typeahead.git"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "start": "webpack --watch",
+    "build": "webpack"
+  },
+  "homepage": "https://github.com/netojose/react-google-places-typeahead",
+  "bugs": {
+    "url": "https://github.com/netojose/react-google-places-typeahead/issues"
+  },
+  "author": "José neto <sputinykster@gmail.com>",
+  "peerDependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.8.0",
+    "babel-loader": "^8.0.6",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "jest": "^24.8.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^3.2.1"
+  },
+  "dependencies": {},
+  "tags": [
+    "react",
+    "autocomplete",
+    "typeahead",
+    "autosuggest",
+    "google-maps",
+    "google-places"
+  ],
+  "keywords": [
+    "react",
+    "react-component",
+    "typeahead",
+    "autocomplete",
+    "autosuggest",
+    "google-maps",
+    "google-places"
+  ]
 }
