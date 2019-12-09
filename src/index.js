@@ -67,6 +67,11 @@ function GooglePlacesTypeahead({
         [activeSuggestion, fetchedData]
     )
 
+    const showList = useMemo(() => isLoading || suggestions.length > 0, [
+        suggestions,
+        isLoading
+    ])
+
     const removeSuggestions = useCallback(() => {
         setFetchedData([])
         setActiveSuggestion(null)
@@ -122,6 +127,7 @@ function GooglePlacesTypeahead({
         evt => {
             const suggestionsQty = suggestions.length
             if (
+                isLoading ||
                 suggestionsQty < 1 ||
                 ![
                     KEY_ESC_CODE,
@@ -160,7 +166,7 @@ function GooglePlacesTypeahead({
                 }
             }
         },
-        [suggestions]
+        [suggestions, isLoading]
     )
 
     const getInputProps = useCallback(
@@ -235,6 +241,7 @@ function GooglePlacesTypeahead({
     return children({
         suggestions,
         isLoading,
+        showList,
         getInputProps,
         getSuggestionItemProps
     })
