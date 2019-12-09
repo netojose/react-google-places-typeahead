@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useCallback, useEffect, useRef } from 'react'
+import { useState, useMemo, useCallback, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 
 import {
@@ -29,7 +29,7 @@ function GooglePlacesTypeahead({
     const googleService = useRef(null)
 
     const loadSuggestions = useCallback((predictions, status) => {
-        if (status != google.maps.places.PlacesServiceStatus.OK) {
+        if (status !== window.google.maps.places.PlacesServiceStatus.OK) {
             onError(status)
             return
         }
@@ -45,7 +45,6 @@ function GooglePlacesTypeahead({
             throw new Error(
                 '[react-google-places-typeahead]: Google maps API not laoded'
             )
-            return
         }
         googleService.current = new window.google.maps.places.AutocompleteService()
         setIsReady(true)
@@ -68,26 +67,26 @@ function GooglePlacesTypeahead({
         [activeSuggestion, fetchedData]
     )
 
+    const removeSuggestions = useCallback(() => {
+        setFetchedData([])
+        setActiveSuggestion(null)
+    }, [])
+
     const doSearch = useMemo(
         () =>
-            debounceEvent(value => {
-                if (!value) {
+            debounceEvent(searchTerm => {
+                if (!searchTerm) {
                     removeSuggestions()
                     return
                 }
                 setIsLoading(true)
                 googleService.current.getQueryPredictions(
-                    { ...searchOptions, input: value },
+                    { ...searchOptions, input: searchTerm },
                     loadSuggestions
                 )
             }, debounce),
         [searchOptions]
     )
-
-    const removeSuggestions = useCallback(() => {
-        setFetchedData([])
-        setActiveSuggestion(null)
-    }, [])
 
     useEffect(() => {
         if (suggestions.length > 0) {
@@ -140,11 +139,14 @@ function GooglePlacesTypeahead({
                 case KEY_ESC_CODE:
                     removeSuggestions()
                     return
-                case KEY_ENTER_CODE:
+
+                case KEY_ENTER_CODE: {
                     const active = suggestions.find(item => item.active)
                     handleSelect(active)
                     return
-                default:
+                }
+
+                default: {
                     const index = suggestions.findIndex(item => item.active)
                     let newIndex =
                         index +
@@ -155,6 +157,7 @@ function GooglePlacesTypeahead({
                         newIndex = 0
                     }
                     setActiveSuggestion(suggestions[newIndex].placeId)
+                }
             }
         },
         [suggestions]
@@ -165,7 +168,7 @@ function GooglePlacesTypeahead({
             const currSuggestionId = getActiveSuggestionId(activeSuggestion)
             const {
                 value: valueProp,
-                onChange,
+                onChange: onChangeFn,
                 onKeyDown,
                 ...extraProps
             } = props
@@ -176,7 +179,7 @@ function GooglePlacesTypeahead({
                 )
             }
 
-            if (onChange) {
+            if (onChangeFn) {
                 throw new Error(
                     '[react-google-places-typeahead]: getInputProps does not accept `onChange`. Use `onChange` prop instead'
                 )
@@ -193,7 +196,9 @@ function GooglePlacesTypeahead({
                 onChange: handleChange,
                 onKeyDown: evt => {
                     handleKeyboardNavigation(evt)
-                    onKeyDown && onKeyDown(evt)
+                    if (onKeyDown) {
+                        onKeyDown(evt)
+                    }
                 }
             }
         },
@@ -214,11 +219,15 @@ function GooglePlacesTypeahead({
             id: getActiveSuggestionId(item.placeId),
             onClick: evt => {
                 handleSelect(item)
-                onClick && onClick(evt)
+                if (onClick) {
+                    onClick(evt)
+                }
             },
             onMouseOver: evt => {
                 setActiveSuggestion(item.placeId)
-                onMouseOver && onMouseOver(evt)
+                if (onMouseOver) {
+                    onMouseOver(evt)
+                }
             }
         }
     }, [])

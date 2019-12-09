@@ -1,10 +1,9 @@
 function getGeocode(query) {
     const geocoder = new window.google.maps.Geocoder()
-    const OK = window.google.maps.GeocoderStatus.OK
 
     return new Promise((resolve, reject) => {
         geocoder.geocode(query, (results, status) => {
-            if (status !== OK) {
+            if (status !== window.google.maps.GeocoderStatus.OK) {
                 reject(status)
             }
             resolve(results)

@@ -1,6 +1,12 @@
-export function debounceEvent(callback, time, interval) {
-    return (...args) =>
-        clearTimeout(interval, (interval = setTimeout(callback, time, ...args)))
+export function debounceEvent(callback, time) {
+    let interval
+    return (...args) => {
+        clearTimeout(interval)
+        interval = setTimeout(() => {
+            interval = null
+            callback(...args)
+        }, time)
+    }
 }
 
 export function getActiveSuggestionId(itemId) {
