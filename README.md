@@ -3,17 +3,33 @@
 </p>
 
 <p align="center">
-  <img src="https://badgen.net/github/license/netojose/react-google-places-typeahead" alt="License">
-  <img src="https://badgen.net/github/last-commit/netojose/react-google-places-typeahead" alt="Last commit">
-  <img src="https://badgen.net/github/open-issues/netojose/react-google-places-typeahead" alt="Open issues">
-  <img src="https://badgen.net/github/stars/netojose/react-google-places-typeahead" alt="Stars">
-  <img src="https://badgen.net/npm/v/@netojose/react-google-places-typeahead" alt="Npm version">
-  <img src="https://badgen.net/bundlephobia/min/@netojose/react-google-places-typeahead" alt="Minified size">
-  <img src="https://badgen.net/bundlephobia/minzip/@netojose/react-google-places-typeahead" alt="Minified gzipped size">
-  <img src="https://badgen.net/npm/dt/@netojose/react-google-places-typeahead" alt="Downloads">
+  <a href="https://www.npmjs.com/package/@netojose/react-google-places-typeahead">
+    <img src="https://badgen.net/github/license/netojose/react-google-places-typeahead" alt="License">
+  </a>
+  <a href="https://www.npmjs.com/package/@netojose/react-google-places-typeahead">
+    <img src="https://badgen.net/github/last-commit/netojose/react-google-places-typeahead" alt="Last commit">
+  </a>
+  <a href="https://www.npmjs.com/package/@netojose/react-google-places-typeahead">
+    <img src="https://badgen.net/github/open-issues/netojose/react-google-places-typeahead" alt="Open issues">
+  </a>
+  <a href="https://www.npmjs.com/package/@netojose/react-google-places-typeahead">
+    <img src="https://badgen.net/github/stars/netojose/react-google-places-typeahead" alt="Stars">
+  </a>
+  <a href="https://www.npmjs.com/package/@netojose/react-google-places-typeahead">
+    <img src="https://badgen.net/npm/v/@netojose/react-google-places-typeahead" alt="Npm version">
+  </a>
+  <a href="https://www.npmjs.com/package/@netojose/react-google-places-typeahead">
+    <img src="https://badgen.net/bundlephobia/min/@netojose/react-google-places-typeahead" alt="Minified size">
+  </a>
+  <a href="https://www.npmjs.com/package/@netojose/react-google-places-typeahead">
+    <img src="https://badgen.net/bundlephobia/minzip/@netojose/react-google-places-typeahead" alt="Minified gzipped size">
+  </a>
+  <a href="https://www.npmjs.com/package/@netojose/react-google-places-typeahead">
+    <img src="https://badgen.net/npm/dt/@netojose/react-google-places-typeahead" alt="Downloads">
+  </a>
 </p>
 
-# React component for Google Maps Places Autocomplete
+# Google Maps Places Autocomplete React component
 
 A React component to build a customized UI for Google Maps Places Autocomplete
 
@@ -22,7 +38,7 @@ A React component to build a customized UI for Google Maps Places Autocomplete
 * [Instalation](#instalation)
 * [Getting Started](#getting-started)
 * [Props](#props)
-* [Helper Functions](#helper-functions)
+* [Utility Functions](#utility-functions)
 
 ## Demo
 *Comming soon*
@@ -39,16 +55,55 @@ npm install --save @netojose/react-google-places-typeahead
 *Comming soon*
 
 ## Props
-| prop                                  	| Description                                                         	| type     	| default value 	| required 	|
-|---------------------------------------	|---------------------------------------------------------------------	|----------	|---------------	|----------	|
-| [children](#props-children)           	| function to render items                                            	| function 	|               	| Yes      	|
-| [value](#props-value)                 	| Search input value                                                  	| string   	|               	| Yes      	|
-| [onChange](#props-onChange)           	| On change event                                                     	| function 	|               	| Yes      	|
-| [onError](#props-onError)             	| On error event                                                      	| function 	| () => null    	| No       	|
-| [gMapsCallback](#props-gMapsCallback) 	| Callback name to initialise component after google script is loaded 	| string   	| null          	| No       	|
-| [onSelect](#props-onSelect)           	| On select event                                                     	| function 	| () => null    	| No       	|
-| [debounce](#props-debounce)           	| Interval between each Google API service call (in ms)               	| integer  	| 200           	| No       	|
-| [searchOptions](#props-searchOptions) 	| Options to Google Maps API                                          	| object   	| {}            	| No       	|
+| prop                             	| Description                                                         	| type     	| default value 	| required 	|
+|----------------------------------	|---------------------------------------------------------------------	|----------	|---------------	|----------	|
+| [children](#children)           	| function to render items                                            	| function 	|               	| Yes      	|
+| [value](#value)                 	| Search input value                                                  	| string   	|               	| Yes      	|
+| [onChange](#onChange)           	| On change event                                                     	| function 	|               	| Yes      	|
+| [onError](#onError)             	| On error event                                                      	| function 	| () => null    	| No       	|
+| [gMapsCallback](#gMapsCallback) 	| Callback name to initialise component after google script is loaded 	| string   	| null          	| No       	|
+| [onSelect](#onSelect)           	| On select event                                                     	| function 	| () => null    	| No       	|
+| [debounce](#debounce)           	| Interval between each Google API service call (in ms)               	| integer  	| 200           	| No       	|
+| [searchOptions](#searchOptions) 	| Options to Google Maps API                                          	| object   	| {}            	| No       	|
 
-## Helper Functions
+### children
+*Comming soon*
+
+### value
+*Comming soon*
+
+### onChange
+*Comming soon*
+
+### onError
+*Comming soon*
+
+### gMapsCallback
+*Comming soon*
+
+### onSelect
+*Comming soon*
+
+### debounce
+*Comming soon*
+
+### searchOptions
+*Comming soon*
+
+## Utility Functions
+* [geocodeByPlaceId](#geocodeByPlaceId)
+* [geocodeByAddress](#geocodeByAddress)
+* [getLatLng](#getLatLng)
+* [loadScript](#loadScript)
+
+### geocodeByPlaceId
+*Comming soon*
+
+### geocodeByAddress
+*Comming soon*
+
+### getLatLng
+*Comming soon*
+
+### loadScript
 *Comming soon*
