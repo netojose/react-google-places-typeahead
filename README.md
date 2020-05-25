@@ -25,7 +25,8 @@ A React component to build a customized UI for Google Maps Places Autocomplete
 * [Utility Functions](#utility-functions)
 
 ## Demo
-*Comming soon*
+* [Online demo on Heroku](https://react-google-places-typeahead.herokuapp.com/)
+* [Demo source code](https://github.com/netojose/react-google-places-typeahead-demo/)
 
 ## Features
 *Comming soon*
