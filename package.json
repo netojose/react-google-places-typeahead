@@ -1,6 +1,6 @@
 {
   "name": "@netojose/react-google-places-typeahead",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React component for Google Maps Places Autocomplete",
   "main": "./dist/index.js",
   "license": "MIT",
